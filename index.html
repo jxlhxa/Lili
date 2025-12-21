@@ -10,6 +10,7 @@
 <body>
   <header>
   <div class="topo">
+   
     <div class="logo">
       <img src="./IMG/logo.svg" alt="Logo da Empresa">
     </div>
@@ -18,9 +19,9 @@
       <button><i class="fa-brands fa-facebook fa-2x"></i></button>
       <button><i class="fa-brands fa-youtube fa-2x"></i></button>
       <button><i class="fa-brands fa-whatsapp fa-2x" ></i></button>
-
     </div>
-    <nav>
+    
+    <nav id="menu">
       <ul>
         <li><a href="">Início</a></li>
         <li><a href="">Imóveis</a></li>
@@ -29,6 +30,7 @@
         <li><a href="">Contato</a></li>
       </ul>
     </nav>
+     <!-- <i id="burguer" class="fa-solid fa-bars" onclick="clickMenu()"></i> -->
   </div>
 </header>
 
@@ -54,27 +56,132 @@
   </div>
 </section>
 
-  </section>
-
    <!-- Seção de imóveis -->
-   <h1 class="oportunidades">Oportunidades <span class="naPlanta">na planta</span></h1>   
+  </section>
+   <h1 class="oportunidades">Oportunidades <span id="naPlanta">na planta</span></h1>   
    <section class="imoveis">
+    <i class="fa-duotone fa-solid fa-arrow-left seta esquerda"></i>
+    <i class="fa-duotone fa-solid fa-arrow-right seta direita"></i>
     
         <div class="option">
           <img src="./IMG/Rectangle 15.png" alt="Imagem imóvel 1" class="imgImovel">
+
+          <div class="enderocoFav">
           <h3 class="endereco">Rua laLlalala, 123 - Ubatuba, SP <br>CEP 12345678</h3>
+           <i class="fa-regular fa-heart favorite" style="color:#02425B "></i>
+          </div>
+
+          <div class="iconsOption">
+            <div>
+            <i class="fa-solid fa-bed"></i>
+            <span>4</span>
+          </div>
+
+          <div>  
+          <i class="fa-solid fa-car"></i>
+          <span>2</span>
+          </div>
+
           <div>
-            <i class="fa-solid fa-bed" style="color:#02425B "></i>
-            <i class="fa-solid fa-car" style="color:#02425B "></i>
-            <i class="fa-solid fa-bath" style="color:#02425B "></i>
-            <i class="fa-regular fa-heart" style="color:#02425B "></i>
+            <i class="fa-solid fa-bath "></i>
+            <span>3</span>
+            </div>
+
+            <p class="saibaMais">Saiba mais</p>
           </div>
 
         </div>
-    
 
+          <div class="option">
+          <img src="./IMG/Rectangle 15.png" alt="Imagem imóvel 1" class="imgImovel">
+
+          <div class="enderocoFav">
+          <h3 class="endereco">Rua laLlalala, 123 - Ubatuba, SP <br>CEP 12345678</h3>
+           <i class="fa-regular fa-heart favorite" style="color:#02425B "></i>
+          </div>
+
+          <div class="iconsOption">
+            <div>
+            <i class="fa-solid fa-bed"></i>
+            <span>4</span>
+          </div>
+
+          <div>  
+          <i class="fa-solid fa-car"></i>
+          <span>2</span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-bath "></i>
+            <span>3</span>
+            </div>
+            
+            <p class="saibaMais">Saiba mais</p>
+          </div>
+
+        </div>
+
+
+          <div class="option">
+          <img src="./IMG/Rectangle 15.png" alt="Imagem imóvel 1" class="imgImovel">
+
+          <div class="enderocoFav">
+          <h3 class="endereco">Rua laLlalala, 123 - Ubatuba, SP <br>CEP 12345678</h3>
+           <i class="fa-regular fa-heart favorite" style="color:#02425B "></i>
+          </div>
+
+          <div class="iconsOption">
+            <div>
+            <i class="fa-solid fa-bed"></i>
+            <span>4</span>
+          </div>
+
+          <div>  
+          <i class="fa-solid fa-car"></i>
+          <span>2</span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-bath "></i>
+            <span>3</span>
+            </div>
+            
+            <p class="saibaMais">Saiba mais</p>
+          </div>
+
+        </div>
   </section>
 
+  <section class="sobre">
+  <h1>Sobre nós</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Ut voluptatibus consectetur atque adipisci quibusdam ipsam illo 
+    eveniet facere autem labore, itaque optio ipsum, accusantium iure dolorem nostrum quos. 
+    Cupiditate, tempora?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Ut voluptatibus consectetur atque adipisci quibusdam ipsam illo 
+    eveniet facere autem labore, itaque optio ipsum, accusantium iure dolorem nostrum quos. 
+    Cupiditate, tempora?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Ut voluptatibus consectetur atque adipisci quibusdam ipsam illo 
+    eveniet facere autem labore, itaque optio ipsum, accusantium iure dolorem nostrum quos. 
+    Cupiditate, tempora?
+  </p>
+  </section>
+
+
+
+
+
+  
+  <!-- <script>
+    function clickMenu(){
+      if (menu.style.display == 'flex'){
+        menu.style.display = 'none'
+      } else (menu.style.display='flex')
+    }
+  </script> -->
 </body>
 
 </html>
