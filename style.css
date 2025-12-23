@@ -103,10 +103,10 @@ header {
   position: absolute;
   right: 8%;
   top: 30%;
-  background-color: rgba(56, 212, 255, 0.692);
-  padding: 30px;
-  border-radius: 12px;
-  width: 300px;
+  background-color:  rgba(56, 212, 255, 0.507); 
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 18.75rem;
   box-shadow: 1px 1px 6px rgba(255, 255, 255, 0.486);
 }
 
@@ -241,13 +241,71 @@ header {
 .sobre{
   position: relative;
   width: 100%;
-  min-height: 60vh;   /* ocupa bem em desktop sem travar */
+  /* min-height: 60vh;   */
   color: #02425B;
-  padding: 1.5rem;      
+  padding: 1.5rem;    
+  /* background-color: #7cbdd6;   */
 }
 .sobre h1{
   text-align: center;
   font-size: 2.5rem;
-  padding: 3%;
+  padding: 1.5rem;
   text-shadow: 2px 2px 2px rgba(206, 199, 199, 0.5)
+}
+
+
+/* .banerFale{
+  display: flex;
+  align-items:center ;
+} */
+
+.faleConosco form {
+  /* background-color:  rgba(56, 212, 255, 0.116);  */
+  background-color:  rgba(56, 212, 255, 0.507);
+  color: #02425B;
+  padding: 1.5rem;
+  border-radius: 16px;
+  width: 18.75rem;
+  margin-top: 2rem;
+  /* margin-left: 18.75rem; */
+  box-shadow: 2px 2px 2px rgba(206, 199, 199, 0.5);
+}
+
+.faleConosco h3 {
+  text-shadow: 2px 2px 6px #00000057   ;
+  margin-bottom:  5px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.faleConosco form {
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.541) ;
+}
+
+.faleConosco input {
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 3px #00000057  ;
+  outline: none;
+}
+
+.faleConosco button {
+  background-color: #99FF02;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  box-shadow: 1px 1px 2px #00000057;
+  color: #02425B;
+}
+
+.faleConosco button:hover {
+  background-color: #436e02;
+  color: #FAFAFA;
 }
