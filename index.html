@@ -7,22 +7,25 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
   <header>
-  <div class="topo">
-   
+   <div class="topo1">
     <div class="logo">
       <img src="./IMG/logo.svg" alt="Logo da Empresa">
     </div>
     <div class="redesSociais">
-      <button><i class="fa-brands fa-instagram fa-2x"></i></button>
-      <button><i class="fa-brands fa-facebook fa-2x"></i></button>
-      <button><i class="fa-brands fa-youtube fa-2x"></i></button>
-      <button><i class="fa-brands fa-whatsapp fa-2x" ></i></button>
+      <button aria-label="Instagram"><i class="fa-brands fa-instagram fa-2x"></i></button>
+      <button aria-label="Facebook"><i class="fa-brands fa-facebook fa-2x"></i></button>
+      <button aria-label="YouTube"><i class="fa-brands fa-youtube fa-2x"></i></button>
+      <button aria-label="Whatsapp"><i class="fa-brands fa-whatsapp fa-2x" ></i></button>
     </div>
-    
-    <nav id="menu">
-      <ul>
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <i class="fa-solid fa-bars"></i></button>
+    <nav >
+      <ul class="menu">
         <li><a href="">Início</a></li>
         <li><a href="">Imóveis</a></li>
         <li><a href="">Alto Padrão</a></li>
@@ -30,14 +33,11 @@
         <li><a href="">Contato</a></li>
       </ul>
     </nav>
-     <!-- <i id="burguer" class="fa-solid fa-bars" onclick="clickMenu()"></i> -->
-  </div>
 </header>
 
 <section class="banner">
   <h1>Ubatuba</h1>
   <p>Seu lar no <span class="paraiso">paraíso</span></p>
-  
 
   <div class="busca">
     <h3>Busca</h3>
@@ -54,10 +54,10 @@
       <button type="submit">BUSCAR</button>
     </form>
   </div>
+  
 </section>
 
    <!-- Seção de imóveis -->
-  </section>
    <h1 class="oportunidades">Oportunidades <span id="naPlanta">na planta</span></h1>   
    <section class="imoveis">
     <i class="fa-duotone fa-solid fa-arrow-left seta esquerda"></i>
@@ -152,53 +152,67 @@
         </div>
   </section>
 
-  <section class="faleConosco">
-   <div class="banerFale">
-     <h3>Fale conosco</h3>
+  <section class="faleMap">
+    <div class="fale">
+      <h3>Fale conosco</h3>
     <form>
       <label for="tipo">Nome </label>
-      <input type="text" id="tipo" name="tipo">
+      <input type="text" id="nome" name="nome">
 
       <label for="negocio">e-mail/telefone </label>
-      <input type="text" id="negocio" name="negocio">
+      <input type="text" id="contato" name="contato">
 
       <label for="local">Mensagem </label>
-      <input type="text" id="local" name="local">
+      <input type="text" id="mensagem" name="mensagem">
 
       <button type="submit">ENVIAR</button>
     </form>
-  </div>
-    <img src="IMG/maps.png" alt="Mapa ilustrativo">
+    </div>
+     <img class="mapa" src="./IMG/maps.png" alt="Mapa Ilustrativo">
   </section>
 
-<section class="sobre">
-  <h1>Sobre nós</h1>
+  <section class="sobreEfiltros">
+ <div class="sobre">
+    <h1>Sobre nós</h1>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Ut voluptatibus consectetur atque adipisci quibusdam ipsam illo 
-    eveniet facere autem labore, itaque optio ipsum, accusantium iure dolorem nostrum quos. 
-    Cupiditate, tempora?
+    Ut voluptatibus <br>consectetur atque adipisci quibusdam ipsam illo 
+    eveniet facere autem labore, <br>itaque optio ipsum, accusantium iure dolorem nostrum quos. 
+    Cupiditate, tempora?<br>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Ut voluptatibus consectetur atque adipisci quibusdam ipsam illo 
-    eveniet facere autem labore, itaque optio ipsum, accusantium iure dolorem nostrum quos. 
+    Ut voluptatibus consectetur <br>atque adipisci quibusdam ipsam illo 
+    eveniet facere autem labore, itaque optio ipsum, <br>accusantium iure dolorem nostrum quos. 
     Cupiditate, tempora?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Ut voluptatibus consectetur atque adipisci quibusdam ipsam illo 
-    eveniet facere autem labore, itaque optio ipsum, accusantium iure dolorem nostrum quos. 
+    Lorem ipsum dolor <br>sit amet consectetur adipisicing elit. 
+    Ut voluptatibus consectetur atque adipisci <br>quibusdam ipsam illo 
+    eveniet facere autem labore, itaque optio ipsum, accusantium <br>iure dolorem nostrum quos. 
     Cupiditate, tempora?
   </p>
+  </div>
+  <nav class="filtros">
+    <h2>Filtros</h2>
+    <ul>
+        <li><a href="">Pé na areia</a></li>
+        <li><a href="">Pronto para mudar</a></li>
+        <li><a href="">Casas em condomínio</a></li>
+        <li><a href="">Coberturas na praia</a></li>
+      </ul>
+  </nav>
+
   </section>
 
+  <footer>
+    Danilo Borges Imóveis Todos os direitos reservados &reg; &copy;
+  </footer>
 
+<script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+</script>
 
-  
-  <!-- <script>
-    function clickMenu(){
-      if (menu.style.display == 'flex'){
-        menu.style.display = 'none'
-      } else (menu.style.display='flex')
-    }
-  </script> -->
 </body>
 
 </html>

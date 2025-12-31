@@ -15,6 +15,13 @@ header {
   left: 0;
   right: 0;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 50px;
+  background-color: #FAFAFA;
+  backdrop-filter: blur(5px);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.212); 
 }
 
 .redesSociais{
@@ -31,39 +38,38 @@ header {
 .redesSociais button:hover i {
   color: #1cd760;
 }
-
-.topo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4px 50px;
-  background-color: #FAFAFA;
-  backdrop-filter: blur(5px);
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.212); 
+.topo1{
+   display: flex;
+   gap: 18%;
 }
 
-
-/* MENU */
-/* #burguer{
-  color:#02425B
-}
-#burguer:hover {
-  color: #1cd760;
+/* Botão menu hamburguer */
+.menu-toggle{
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: auto;
+  font-size: 28px;
+  background-color: none;
+  background: none;
+  color: #0AAFEE;
+  border: none;
   cursor: pointer;
-} */
-#menu ul {
+}
+
+.menu {
   display: flex;
   list-style: none;
   gap: 30px;
 }
 
-#menu a {
+.menu a {
   text-decoration: none;
   color:#02425B;
   font-weight: 500;
 }
 
-#menu a:hover {
+.menu a:hover {
   color: #1cd760;
 }
 
@@ -103,10 +109,10 @@ header {
   position: absolute;
   right: 8%;
   top: 30%;
-  background-color:  rgba(56, 212, 255, 0.507); 
-  padding: 2rem;
-  border-radius: 1rem;
-  width: 18.75rem;
+  background-color: rgba(56, 212, 255, 0.692);
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
   box-shadow: 1px 1px 6px rgba(255, 255, 255, 0.486);
 }
 
@@ -145,7 +151,7 @@ header {
 }
 
 .busca button:hover {
-  background-color: #436e02;
+  background-color: #72b40e;
   color: #FAFAFA;
 }
 
@@ -236,65 +242,51 @@ header {
   color: #1cd760;
 }
 
+/* Fale conosco  e mapa*/
 
-/* Sobre nós */
-.sobre{
-  position: relative;
-  width: 100%;
-  /* min-height: 60vh;   */
-  color: #02425B;
-  padding: 1.5rem;    
-  /* background-color: #7cbdd6;   */
-}
-.sobre h1{
-  text-align: center;
-  font-size: 2.5rem;
-  padding: 1.5rem;
-  text-shadow: 2px 2px 2px rgba(206, 199, 199, 0.5)
-}
-
-
-/* .banerFale{
+.faleMap{
   display: flex;
-  align-items:center ;
-} */
-
-.faleConosco form {
-  /* background-color:  rgba(56, 212, 255, 0.116);  */
-  background-color:  rgba(56, 212, 255, 0.507);
-  color: #02425B;
-  padding: 1.5rem;
-  border-radius: 16px;
-  width: 18.75rem;
-  margin-top: 2rem;
-  /* margin-left: 18.75rem; */
-  box-shadow: 2px 2px 2px rgba(206, 199, 199, 0.5);
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+  margin-top: 3%;
+  padding: 4%;
 }
 
-.faleConosco h3 {
-  text-shadow: 2px 2px 6px #00000057   ;
+.fale {
+  color: #02425B;
+  right: 8%;
+  top: 30%;
+  padding: 30px;
+  border-radius: 12px;
+  width: 30%;
+}
+
+.fale h3 {
+  text-shadow: 2px 2px 2px rgba(206, 199, 199, 0.5);  
   margin-bottom:  5px;
   font-size: 25px;
   text-align: center;
+  color: #02425B;
 }
 
-.faleConosco form {
+.fale form {
   display: flex;
   flex-direction: column;
   gap:5px;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.541) ;
+  text-shadow: 2px 2px 2px rgba(206, 199, 199, 0.5);  
 }
 
-.faleConosco input {
+.fale input {
   padding: 8px;
   border-radius: 10px;
   border: none;
-  box-shadow: 1px 1px 3px #00000057  ;
+  box-shadow: 2px 2px 2px rgba(206, 199, 199, 0.5);  
   outline: none;
 }
 
-.faleConosco button {
-  background-color: #99FF02;
+.fale button {
+  background-color: #0aadee36;
   border: none;
   padding: 10px;
   border-radius: 10px;
@@ -305,7 +297,48 @@ header {
   color: #02425B;
 }
 
-.faleConosco button:hover {
-  background-color: #436e02;
+.fale button:hover {
+  background-color: #0AAFEE;
   color: #FAFAFA;
+}
+ 
+/* Sobre nós */
+.sobreEfiltros{
+  background-color:  rgba(56, 212, 255, 0.116); 
+  display: flex;
+  align-items: baseline;
+  gap: 20%;
+  padding: 2%;
+  color: #02425B;
+}
+.sobre h1{
+  color:#04435c;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 3%;
+  text-shadow: 2px 2px 2px rgba(206, 199, 199, 0.5)
+}
+
+footer{
+  text-align: center;
+  background-color: #0AAFEE;
+  color: #FAFAFA;
+}
+
+/* Responsivo: até 768px  */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav ul.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0aadee3d;
+    padding: 10px 0;
+  }
+
+  nav ul.menu.show {
+    display: flex;
+  }
 }
