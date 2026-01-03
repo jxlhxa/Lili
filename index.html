@@ -10,22 +10,43 @@
 
 <body>
   <header>
-   <div class="topo1">
+    <div class="header-top">
     <div class="logo">
       <img src="./IMG/logo.svg" alt="Logo da Empresa">
-    </div>
-    <div class="redesSociais">
-      <button aria-label="Instagram"><i class="fa-brands fa-instagram fa-2x"></i></button>
-      <button aria-label="Facebook"><i class="fa-brands fa-facebook fa-2x"></i></button>
-      <button aria-label="YouTube"><i class="fa-brands fa-youtube fa-2x"></i></button>
-      <button aria-label="Whatsapp"><i class="fa-brands fa-whatsapp fa-2x" ></i></button>
-    </div>
     </div>
 
     <button class="menu-toggle" aria-label="Abrir menu">
       <i class="fa-solid fa-bars"></i></button>
+    </div>
+
+    <div class="header-content">
+    <nav>
+      <ul class="nav-esquerda">
+        <li>
+          <a href="" aria-label="Instagram">
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+      </li>
+        <li>
+          <a href="" aria-label="Facebook">
+            <i class="fa-brands fa-facebook fa-2x"></i>
+          </a>
+        </li>
+        <li>
+          <a href="" aria-label="YouTube">
+            <i class="fa-brands fa-youtube fa-2x"></i>
+          </a>
+        </li>
+        <li>
+          <a href="" aria-label="Whatsapp">
+            <i class="fa-brands fa-whatsapp fa-2x" ></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  
     <nav >
-      <ul class="menu">
+      <ul class="nav-direita">
         <li><a href="">Início</a></li>
         <li><a href="">Imóveis</a></li>
         <li><a href="">Alto Padrão</a></li>
@@ -33,6 +54,7 @@
         <li><a href="">Contato</a></li>
       </ul>
     </nav>
+    </div>
 </header>
 
 <section class="banner">
@@ -43,13 +65,13 @@
     <h3>Busca</h3>
     <form>
       <label for="tipo">Tipo </label>
-      <input type="text" id="tipo" name="tipo">
+      <input type="text" id="tipo" name="tipo" placeholder="Ex: Apartamento" required>
 
       <label for="negocio">Negócio </label>
-      <input type="text" id="negocio" name="negocio">
+      <input type="text" id="negocio" name="negocio"  placeholder="Ex: Venda ou aluguel" required>
 
       <label for="local">Local </label>
-      <input type="text" id="local" name="local">
+      <input type="text" id="local" name="local"  placeholder="Ex: Ubatuba" required>
 
       <button type="submit">BUSCAR</button>
     </form>
@@ -58,10 +80,10 @@
 </section>
 
    <!-- Seção de imóveis -->
-   <h1 class="oportunidades">Oportunidades <span id="naPlanta">na planta</span></h1>   
+   <h2 class="oportunidades">Oportunidades <span id="naPlanta">na planta</span></h2>   
    <section class="imoveis">
-    <i class="fa-duotone fa-solid fa-arrow-left seta esquerda"></i>
-    <i class="fa-duotone fa-solid fa-arrow-right seta direita"></i>
+    <i class="fa-solid fa-arrow-left seta esquerda"></i>
+    <i class="fa-solid fa-arrow-right seta direita"></i>
     
         <div class="option">
           <img src="./IMG/Rectangle 15.png" alt="Imagem imóvel 1" class="imgImovel">
@@ -156,13 +178,13 @@
     <div class="fale">
       <h3>Fale conosco</h3>
     <form>
-      <label for="tipo">Nome </label>
+      <label for="nome">Nome</label>
       <input type="text" id="nome" name="nome">
 
-      <label for="negocio">e-mail/telefone </label>
+      <label for="contato">E-mail ou telefone</label>
       <input type="text" id="contato" name="contato">
 
-      <label for="local">Mensagem </label>
+      <label for="mensagem">Mensagem</label>
       <input type="text" id="mensagem" name="mensagem">
 
       <button type="submit">ENVIAR</button>
@@ -173,7 +195,7 @@
 
   <section class="sobreEfiltros">
  <div class="sobre">
-    <h1>Sobre nós</h1>
+    <h2>Sobre nós</h2>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
     Ut voluptatibus <br>consectetur atque adipisci quibusdam ipsam illo 
@@ -202,12 +224,13 @@
   </section>
 
   <footer>
-    Danilo Borges Imóveis Todos os direitos reservados &reg; &copy;
+    Danilo Borges Imóveis - Todos os direitos reservados &reg; &copy;
   </footer>
 
 <script>
     const toggleBtn = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
+    const menu = document.querySelector('.header-content');
+
     toggleBtn.addEventListener('click', () => {
       menu.classList.toggle('show');
     });

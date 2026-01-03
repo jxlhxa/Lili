@@ -4,74 +4,91 @@
   box-sizing: border-box;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
 body{
   background-color: #FAFAFA;
-}
-/* HEADER */
+} 
+
+/* ===== HEADER GERAL ===== */
 header {
-  position: fixed; 
+  position: fixed;
+  display: flex;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4px 50px;
+  width: 100%;
+  z-index: 1000;
   background-color: #FAFAFA;
   backdrop-filter: blur(5px);
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.212); 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.redesSociais{
-  display: flex;
-  gap: 30px;
-}
-.redesSociais button{
-  background: none;      
-  border: none;         
-  padding: 0;            
-  cursor: pointer;
-   color: #0AAFEE;
-}
-.redesSociais button:hover i {
-  color: #1cd760;
-}
-.topo1{
-   display: flex;
-   gap: 18%;
+/* ===== BARRA SUPERIOR ===== */
+
+.header-top {
+  display: flex; /* só aparece no mobile */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
 }
 
-/* Botão menu hamburguer */
-.menu-toggle{
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: auto;
-  font-size: 28px;
-  background-color: none;
+/* Logo */
+.logo img {
+  height: 40px;
+}
+
+/* Botão hamburguer */
+.menu-toggle {
+  display: none; /* só aparece no mobile */
   background: none;
-  color: #0AAFEE;
   border: none;
+  font-size: 28px;
+  color: #0AAFEE;
   cursor: pointer;
 }
 
-.menu {
+/* ===== CONTEÚDO DO MENU ===== */
+.header-content {
   display: flex;
-  list-style: none;
-  gap: 30px;
+  align-items: center;
+  width: 100%;
+  padding: 10px ;
 }
 
-.menu a {
+/* MENUS */
+.nav-direita,
+.nav-esquerda {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+}
+.header-content nav:last-child {
+  margin-left: auto;
+  padding-right: 30px;
+}
+
+
+/* Links do menu */
+.nav-direita a {
   text-decoration: none;
-  color:#02425B;
+  color: #02425B;
   font-weight: 500;
 }
 
-.menu a:hover {
+.nav-direita a:hover {
   color: #1cd760;
 }
+
+/* Ícones sociais */
+.nav-esquerda i {
+  color: #0AAFEE;
+  cursor: pointer;
+}
+
+.nav-esquerda i:hover {
+  color: #1cd760;
+}
+
 
 
 
@@ -95,7 +112,7 @@ header {
 }
 
 .banner p {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 30px;
   text-shadow: 2px 2px 6px rgb(0, 0, 0);  
@@ -311,7 +328,7 @@ header {
   padding: 2%;
   color: #02425B;
 }
-.sobre h1{
+.sobre h2{
   color:#04435c;
   text-align: center;
   font-size: 2.5rem;
@@ -323,22 +340,56 @@ footer{
   text-align: center;
   background-color: #0AAFEE;
   color: #FAFAFA;
+  padding: 8px;
 }
 
-/* Responsivo: até 768px  */
+/* RESPONSIVO */
 @media (max-width: 768px) {
+  header{
+    flex-direction: column;
+  }
+  .header-top{
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
   .menu-toggle {
     display: block;
   }
-  nav ul.menu {
+  
+  /* esconde menu no mobile */
+  .header-content {
     display: none;
+    width: 100%;
     flex-direction: column;
-    align-items: center;
-    background-color: #0aadee3d;
-    padding: 10px 0;
+    align-items: flex-start;
+    padding: 10px 40px;
   }
 
-  nav ul.menu.show {
+  .header-content.show {
     display: flex;
+  } 
+
+  .nav-direita {
+    flex-direction: column;
+    gap: 9px;
+    font-size: 1.2rem;
+    align-items: flex-start;
+    text-align: left;
   }
+  .header-content nav:last-child {
+    margin-left: 0
+  }
+  .nav-esquerda {
+    margin-bottom: 9px;
+  }
+
+  .imoveis {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .option{
+    width: 100%;
+  }
+
+  
 }
